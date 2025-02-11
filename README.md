@@ -84,7 +84,21 @@
 docker build --build-arg TMDB_V3_API_KEY=your_api_key_here -t netflix-clone .
 
 docker run --name netflix-clone-website --rm -d -p 80:80 netflix-clone
+
+
 ```
+## Explanation
+
+Build the Docker image with the specified build argument (TMDB_V3_API_KEY) and tag it as 'netflix-clone'
+The build argument 'TMDB_V3_API_KEY' is used to pass the API key to the Docker image during the build process
+
+Run a container from the 'netflix-clone' image, name it 'netflix-clone-website', remove it when stopped,
+run it in detached mode, and map port 80 of the host to port 80 of the container
+The '--rm' flag ensures the container is removed when it stops
+The '-d' flag runs the container in detached mode (in the background)
+The '-p 80:80' flag maps port 80 of the host to port 80 of the container
+
+
 
 ## Todo
 
